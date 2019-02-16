@@ -232,9 +232,13 @@ def getPeForCode2(codeList):
     #初始化dict,用code做为key，然后赋值value为pe
     #peDict = dict().fromkeys(codeTuple)
     peDict = {}
-    codeTuple = tuple(codeList)
-    codeTuple = str(codeTuple)
-    pe2codeTuple = get_pe2(codeTuple)
+    listLength = len(codeList)
+    if listLength ==1:
+        codeTupleStr = "('"+codeList[0]+"')"
+    else:
+        codeTuple = tuple(codeList)
+        codeTupleStr = str(codeTuple)
+    pe2codeTuple = get_pe2(codeTupleStr)
     for pe2code in pe2codeTuple:
         key = pe2code[0]
         value = pe2code[1]

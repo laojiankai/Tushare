@@ -8,7 +8,7 @@ import tushare as ts
 if __name__ == '__main__':
 
     #要读取的记录数
-    dateNumber = recordNumber = 4
+    dateNumber = recordNumber = 3
     codeList = get_code()
     #priceCodeList = getCodeForPrice(codeList,dateNumber)
     #rateCodeList = getCodeForRate(priceCodeList, recordNumber)
@@ -17,15 +17,18 @@ if __name__ == '__main__':
     dataDict = getDataDict(codeList, dateNumber)
     priceCodeList,closePriceDict = getCodeForPrice3(dataDict, dateNumber)
     rateCodeList = getCodeForRate2(closePriceDict)
-    pedict = getPeForCode2(rateCodeList)
-    pedictLengthStr = str(len(pedict))
-    writeFile(" code  :  pe")
-    items = pedict.items()
-    items.sort()
-    for key, value in items:
-        strPeDict = str(key) + ' : ' + str(value)
-        print strPeDict
-        writeFile(strPeDict)
-    pedictLengthStr = "pedictLength : " + pedictLengthStr
-    print pedictLengthStr
-    writeFile(pedictLengthStr)
+    if rateCodeList != []:
+        pedict = getPeForCode2(rateCodeList)
+        pedictLengthStr = str(len(pedict))
+        writeFile(" code  :  pe")
+        items = pedict.items()
+        items.sort()
+        for key, value in items:
+            strPeDict = str(key) + ' : ' + str(value)
+            print strPeDict
+            writeFile(strPeDict)
+        pedictLengthStr = "pedictLength : " + pedictLengthStr
+        print pedictLengthStr
+        writeFile(pedictLengthStr)
+    else:
+        print "没有符合条件的code值！！！"
