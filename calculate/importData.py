@@ -6,8 +6,8 @@ from calculate import *
 def importData():
     # 每天凌晨定时获取前一天的数据入库
     # startDate= get_yesterday()
-    startDate = '2019-02-15'
-    endDate = '2019-02-30'
+    startDate = '2019-03-13'
+    endDate = '2019-03-30'
     # 基础数据更新
     # importIndustryDatas()
     # importStockBasics()
