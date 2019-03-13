@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-import tushare as ts
-import datetime
-import time
+#import tushare as ts
+#import datetime
+#import time
 from calculate import *
 from databaseOperation import *
-from mpl_finance import *
+#from mpl_finance import *
 from matplotlib.pylab import date2num
 from common import *
 

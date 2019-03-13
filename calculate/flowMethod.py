@@ -3,8 +3,8 @@
 
 from calculate import *
 from common import getExpcetion
-import time
-import traceback
+#import time
+#import traceback
 
 
 resultRate = []

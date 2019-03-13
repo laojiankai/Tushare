@@ -2,13 +2,11 @@
 # -*- coding: UTF-8 -*-
 
 from calculate import *
-import tushare as ts
+#import tushare as ts
 
-
-if __name__ == '__main__':
-
+def main():
     #要读取的记录数
-    dateNumber = recordNumber = 3
+    dateNumber = recordNumber = 4
     codeList = get_code()
     #priceCodeList = getCodeForPrice(codeList,dateNumber)
     #rateCodeList = getCodeForRate(priceCodeList, recordNumber)
@@ -32,3 +30,7 @@ if __name__ == '__main__':
         writeFile(pedictLengthStr)
     else:
         print "没有符合条件的code值！！！"
+
+
+if __name__ == '__main__':
+    main()
